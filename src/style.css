@@ -4,6 +4,7 @@
   --nav-bg-color: #333;
   --nav-bg-color-active: #111;
   --green: #056767;
+  --green-team-memmber-card: rgba(5, 103, 103, 0.7);
   --body-bg-color: rgba(3, 3, 3, 0.8);
 }
 
@@ -55,26 +56,28 @@ nav a:hover {
   background-color: var(--nav-bg-color-active);
 }
 
-nav ul li.navHomeIcon {
+nav ul li:first-child {
   margin-right: auto;
+}
+
+nav ul a.navHomeIcon {
   display: flex;
   align-items: center;
   padding-left: 20px;
   cursor: pointer;
 }
 
-nav ul li.navHomeIcon i {
+nav ul a.navHomeIcon i {
   font-size: 30px;
   margin-right: 15px;
 }
 
-nav ul li.navHomeIcon h1 {
+nav ul a.navHomeIcon h1 {
   font-size: 20px;
   padding: 0;
 }
 
 nav ul li.searchBar {
-  margin-left: auto;
   display: flex;
   align-items: center;
 }
@@ -115,7 +118,11 @@ nav ul li.searchBar button:active {
   transform: scale(0.95);
 }
 
-.webIntro {
+nav ul li.searchBar.hidden {
+  display: none;
+}
+
+.webContent {
   flex: 1;
   background-color: var(--nav-bg-color-active);
   background: linear-gradient(
@@ -123,40 +130,39 @@ nav ul li.searchBar button:active {
     var(--nav-bg-color) 0%,
     rgba(3, 3, 3, 0) 100%
   );
-  width: 60%;
   display: flex;
   color: white;
 }
 
-.webIntro .socialMedia {
+.webContent .socialMedia {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.webIntro .socialMedia a {
+.webContent .socialMedia a {
   color: white;
   font-size: 30px;
   padding: 20px 30px;
 }
 
-.webIntro .info {
-  margin: 100px 30px;
-  text-shadow: var(--nav-bg-color) 1px 0 20px;
+.webContent .info {
+  margin: 100px 0;
 }
 
-.webIntro .info h1 {
+.webContent .info h1 {
   font-size: 100px;
   font-weight: bold;
+  padding-left: 30px;
 }
 
-.webIntro .info p {
+.webContent .info p {
   font-size: 20px;
   width: 60%;
-  padding: 20px 300px 50px 10px;
+  padding: 30px 30px;
 }
 
-.webIntro .info button {
+.webContent .info button {
   background-color: var(--green);
   color: white;
   border: 0;
@@ -164,10 +170,64 @@ nav ul li.searchBar button:active {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   padding: 10px 30px;
   border-radius: 10px;
 }
 
-.webIntro .info button:active {
+.webContent .info button:active {
   transform: scale(0.95);
+}
+
+.recomendations {
+  background-color: #056767;
+  width: 70%;
+}
+
+.ourTeam {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ourTeam h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.ourTeam .teamMember-container {
+  background-color: var(--green-team-memmber-card);
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 10px 5px;
+  padding: 20px 5px 10px 5px;
+}
+
+.ourTeam .teamMember-container .memberIcon {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.ourTeam .teamMember-container .memberIcon i {
+  padding: 10px;
+}
+
+.ourTeam .teamMember-container h2,
+.ourTeam .teamMember-container span {
+  padding: 5px 0;
+}
+
+.ourTeam .teamMember-container hr {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.ourTeam .teamMember-container .memberSocials a {
+  font-size: 20px;
+  margin: 10px 5px;
+  color: white;
 }
