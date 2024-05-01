@@ -8,106 +8,106 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../resources/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 nav {
   background-color: var(--nav-bg-color);
   color: white;
-  width: 100%;
-  height: 50px;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-nav .navHomeIcon {
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  font-weight: bold;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  top: 0;
-  left: 0;
+  color: white;
+  font-size: 18px;
+}
+
+nav a:hover {
+  background-color: var(--nav-bg-color-active);
+}
+
+nav ul li.navHomeIcon {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
   padding-left: 20px;
   cursor: pointer;
 }
 
-nav .navHomeIcon i {
+nav ul li.navHomeIcon i {
   font-size: 30px;
   margin-right: 15px;
 }
 
-nav .navHomeIcon h1 {
+nav ul li.navHomeIcon h1 {
   font-size: 20px;
   padding: 0;
 }
 
-nav .btnList {
+nav ul li.searchBar {
+  margin-left: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: 20px;
-  color: white;
 }
 
-nav .btnList .navBtn {
-  cursor: pointer;
-  height: 100%;
-  margin: 0;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-nav .btnList .navBtn:hover {
-  background-color: var(--nav-bg-color-active);
-}
-
-nav .btnList .navBtn a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-nav .actions {
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
-}
-
-nav .actions .container {
+nav ul li.searchBar .container {
   background-color: white;
   display: flex;
   align-items: center;
-  padding: 0 15px;
-  height: 70%;
+  margin: 0 30px;
+  padding: 5px 15px;
   border-radius: 20px;
 }
 
-nav .actions .container input {
+nav ul li.searchBar input {
   border: 0;
   font-size: 15px;
   width: 200px;
 }
 
-nav .actions .container input:focus {
+nav ul li.searchBar input:focus {
   outline: none;
 }
 
-nav .actions .container input::placeholder {
+nav ul li.searchBar input::placeholder {
   color: var(--green);
 }
 
-nav .actions .container button {
+nav ul li.searchBar button {
   cursor: pointer;
+  margin: 0 5px;
   color: var(--green);
   border: 0;
   background-color: white;
   font-size: 18px;
 }
 
-nav .actions .container button:active {
+nav ul li.searchBar button:active {
   transform: scale(0.95);
 }
