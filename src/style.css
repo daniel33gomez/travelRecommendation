@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --nav-bg-color: #333;
+  --nav-bg-color-active: #111;
+  --green: #056767;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  background-color: var(--nav-bg-color);
+  color: white;
+  width: 100%;
+  height: 50px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav .navHomeIcon {
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+nav .navHomeIcon i {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+nav .navHomeIcon h1 {
+  font-size: 20px;
+  padding: 0;
+}
+
+nav .btnList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  color: white;
+}
+
+nav .btnList .navBtn {
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .btnList .navBtn:hover {
+  background-color: var(--nav-bg-color-active);
+}
+
+nav .btnList .navBtn a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav .actions {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+nav .actions .container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 70%;
+  border-radius: 20px;
+}
+
+nav .actions .container input {
+  border: 0;
+  font-size: 15px;
+  width: 200px;
+}
+
+nav .actions .container input:focus {
+  outline: none;
+}
+
+nav .actions .container input::placeholder {
+  color: var(--green);
+}
+
+nav .actions .container button {
+  cursor: pointer;
+  color: var(--green);
+  border: 0;
+  background-color: white;
+  font-size: 18px;
+}
+
+nav .actions .container button:active {
+  transform: scale(0.95);
+}
