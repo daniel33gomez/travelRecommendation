@@ -4,6 +4,7 @@
   --nav-bg-color: #333;
   --nav-bg-color-active: #111;
   --green: #056767;
+  --body-bg-color: rgba(3, 3, 3, 0.8);
 }
 
 * {
@@ -18,6 +19,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -109,5 +112,62 @@ nav ul li.searchBar button {
 }
 
 nav ul li.searchBar button:active {
+  transform: scale(0.95);
+}
+
+.webIntro {
+  flex: 1;
+  background-color: var(--nav-bg-color-active);
+  background: linear-gradient(
+    90deg,
+    var(--nav-bg-color) 0%,
+    rgba(3, 3, 3, 0) 100%
+  );
+  width: 60%;
+  display: flex;
+  color: white;
+}
+
+.webIntro .socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.webIntro .socialMedia a {
+  color: white;
+  font-size: 30px;
+  padding: 20px 30px;
+}
+
+.webIntro .info {
+  margin: 100px 30px;
+  text-shadow: var(--nav-bg-color) 1px 0 20px;
+}
+
+.webIntro .info h1 {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.webIntro .info p {
+  font-size: 20px;
+  width: 60%;
+  padding: 20px 300px 50px 10px;
+}
+
+.webIntro .info button {
+  background-color: var(--green);
+  color: white;
+  border: 0;
+  font-size: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.webIntro .info button:active {
   transform: scale(0.95);
 }
