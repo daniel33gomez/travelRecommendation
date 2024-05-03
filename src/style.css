@@ -25,6 +25,18 @@ body {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nav-bg-color);
+}
+
 nav {
   background-color: var(--nav-bg-color);
   color: white;
@@ -190,6 +202,18 @@ nav ul li.searchBar.hidden {
   overflow-y: auto;
 }
 
+.recomendations .localTime-card {
+  background-color: var(--green);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.recomendations .localTime-card span {
+  font-weight: bold;
+}
+
 .recomendations .recommendation-card {
   background-color: white;
   color: var(--nav-bg-color-active);
@@ -212,6 +236,7 @@ nav ul li.searchBar.hidden {
 }
 
 .recomendations .recommendation-card button {
+  cursor: pointer;
   margin: 10px 0;
   color: white;
   background-color: var(--green);
@@ -219,6 +244,10 @@ nav ul li.searchBar.hidden {
   border: 0;
   border-radius: 5px;
   font-size: 15px;
+}
+
+.recomendations .recommendation-card button:active {
+  transform: scale(0.95);
 }
 
 .ourTeam {
