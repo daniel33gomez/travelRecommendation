@@ -5,7 +5,7 @@
   --nav-bg-color-active: #111;
   --green: #056767;
   --green-team-memmber-card: rgba(5, 103, 103, 0.7);
-  --body-bg-color: rgba(3, 3, 3, 0.8);
+  --body-bg-color: rgba(3, 3, 3, 0.5);
 }
 
 * {
@@ -22,6 +22,7 @@ body {
   background-position: center;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 nav {
@@ -105,6 +106,10 @@ nav ul li.searchBar input::placeholder {
   color: var(--green);
 }
 
+nav ul li.searchBar input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 nav ul li.searchBar button {
   cursor: pointer;
   margin: 0 5px;
@@ -159,7 +164,7 @@ nav ul li.searchBar.hidden {
 .webContent .info p {
   font-size: 20px;
   width: 60%;
-  padding: 30px 30px;
+  padding: 30px 0 30px 30px;
 }
 
 .webContent .info button {
@@ -180,8 +185,40 @@ nav ul li.searchBar.hidden {
 }
 
 .recomendations {
-  background-color: #056767;
-  width: 70%;
+  height: 90vh;
+  width: 60%;
+  overflow-y: auto;
+}
+
+.recomendations .recommendation-card {
+  background-color: white;
+  color: var(--nav-bg-color-active);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.recomendations .recommendation-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.recomendations .recommendation-card h1 {
+  margin: 5px 0;
+}
+
+.recomendations .recommendation-card p {
+  color: var(--nav-bg-color);
+}
+
+.recomendations .recommendation-card button {
+  margin: 10px 0;
+  color: white;
+  background-color: var(--green);
+  padding: 3px 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
 .ourTeam {
@@ -230,4 +267,62 @@ nav ul li.searchBar.hidden {
   font-size: 20px;
   margin: 10px 5px;
   color: white;
+}
+
+.contactUsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactUsForm h1 {
+  font-size: 50px;
+  padding: 5px;
+}
+
+.contactUsForm p {
+  font-size: 20px;
+}
+
+.contactUsForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: var(--body-bg-color);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.contactUsForm form label {
+  margin-right: auto;
+}
+
+.contactUsForm form .field {
+  width: 95%;
+  margin: 5px 0px 15px 0px;
+  font-size: 20px;
+  background-color: var(--body-bg-color);
+  border-radius: 10px;
+  border: 1px solid var(--nav-bg-color);
+  color: white;
+  padding: 5px 10px;
+}
+
+.contactUsForm form button {
+  background-color: var(--green);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.contactUsForm form button:active {
+  transform: scale(0.95);
 }
