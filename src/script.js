@@ -2,7 +2,7 @@ const searchInput = document.getElementById('searchInput');
 const recommendations = document.querySelector('.recomendations');
 
 let data = {};
-fetch('../resources/travel_recommendation_api.json')
+fetch('../travel_recommendation_api.json')
   .then((response) => response.json())
   .then((json) => (data = json));
 
